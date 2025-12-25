@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.stopwatch-container {
+    position: relative;
+    width: 300px;
+    height: 380px; /* Increased height for buttons */
+}
+
+/* The Yellow Body */
+.stopwatch-body {
+    width: 100%;
+    height: 100%;
+    background-color: #fdd835; /* Bright Yellow */
+    border-radius: 60px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.2),
+        inset 0 -5px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Black Inner Face */
+.inner-face {
+    width: 85%;
+    height: 90%;
+    background-color: #000;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    position: relative;
+}
+
+/* Labels */
+.labels-top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fdd835;
+}
+
+.label-center {
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}
+
+.labels-bottom {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.labels-bottom h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #fdd835;
+    letter-spacing: 2px;
+}
+
+.labels-bottom p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #fdd835;
+}
+
+/* The LCD Display */
+.display-screen {
+    background-color: #c4cfa1; /* LCD Greenish-Grey */
+    width: 95%;
+    padding: 10px 5px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 15px;
+}
+
+.lcd-text {
+    font-family: 'Orbitron', monospace; /* Digital font look */
+    font-size: 28px; /* Slightly smaller to fit HH:MM:SS.MS */
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.lcd-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    color: #1a1a1a;
+    margin-top: 2px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+/* Control Buttons */
+.controls-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+.control-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: transform 0.1s, opacity 0.2s;
+    color: white;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.btn-green {
+    background-color: #2ecc71;
+}
+
+.btn-red {
+    background-color: #e74c3c;
+}
+
+.btn-yellow {
+    background-color: #f1c40f;
+    color: #000;
+}
+
+/* Buttons (Ears) */
+.button-housing {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: #333;
+    z-index: 1;
+}
+
+.button-housing.left {
+    top: 30px;
+    left: 20px;
+    transform: rotate(-45deg);
+}
+
+.button-housing.right {
+    top: 30px;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+.button-housing.top {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+.physical-btn {
+    width: 100%;
+    height: 15px;
+    background-color: #1a1a1a; /* Black button */
+    border: none;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 2px 0 #555;
+    transition: top 0.1s, box-shadow 0.1s;
+}
+
+.physical-btn:active {
+    top: -12px;
+    box-shadow: 0 0 0 #555;
+}
+
+.fake-btn {
+    width: 100%;
+    height: 10px;
+    background-color: #1a1a1a;
+    position: absolute;
+    top: -10px;
+    border-radius: 2px 2px 0 0;
+}
+
+/* Strap Loop */
+.strap-loop {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 40px;
+    background-color: #fdd835;
+    z-index: 1;
+    border-radius: 0 0 20px 20px;
+}
