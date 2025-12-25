@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YS-802C Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <!-- Physical Buttons (Visual Only) -->
+        <div class="button-housing left"></div>
+        <div class="button-housing right"></div>
+        <div class="button-housing top">
+            <div class="fake-btn"></div>
+        </div>
+
+        <!-- Main Body -->
+        <div class="stopwatch-body">
+            <div class="inner-face">
+                <div class="labels-top">
+                    <span class="label-center">Chay69</span>
+                </div>
+
+                <div class="display-screen">
+                    <div class="lcd-text" id="display">00:00:00.00</div>
+                    <div class="lcd-labels">
+                        <span>STOPWATCH</span>
+                        <span>1/100</span>
+                    </div>
+                </div>
+
+                <!-- Control Buttons -->
+                <div class="controls-container">
+                    <button id="startBtn" class="control-btn btn-green">Start</button>
+                    <button id="stopBtn" class="control-btn btn-red">Stop</button>
+                    <button id="resetBtn" class="control-btn btn-yellow">Reset</button>
+                </div>
+
+                <div class="labels-bottom">
+                    <h2>STOPWATCH</h2>
+                    <p>YS-802C</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Neck Strap (Visual only) -->
+        <div class="strap-loop"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
